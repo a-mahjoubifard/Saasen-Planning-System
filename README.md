@@ -24,6 +24,6 @@ This system addresses that gap by centralizing planning-related data and making 
 ## Architecture
 The system follows a layered architecture separating UI, workflow orchestration, scheduling logic, data persistence, and external integrations (notifications, calendar sync).
 
-Data Model: View on dbdiagram.io
-Data Flow Diagram: View diagram
-High-Level Architecture Diagrams: View diagrams
+- Data Model: View on dbdiagram.io
+- Data Flow Diagram: View diagram
+- High-Level Architecture Diagrams: View diagrams
