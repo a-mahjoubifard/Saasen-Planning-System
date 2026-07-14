@@ -13,3 +13,17 @@ This system addresses that gap by centralizing planning-related data and making 
 - Freelancer fallback workflow for sessions without an available internal instructor
 - Support for both on-site (Saasen) and external (customer-location) training sessions
 - Role-based access for planners, instructors, freelancers, and customers
+
+## Tech Stack
+
+- Backend: Spring Boot (Java)
+- Framework: JHipster (entity-driven, rapid prototyping)
+- Database: Relational database (JHipster-generated persistence layer)
+- Architecture: Layered architecture (UI, Application/Workflow, Domain, Data/Persistence, Integration & Communication)
+
+## Architecture
+The system follows a layered architecture separating UI, workflow orchestration, scheduling logic, data persistence, and external integrations (notifications, calendar sync).
+
+Data Model: View on dbdiagram.io
+Data Flow Diagram: View diagram
+High-Level Architecture Diagrams: View diagrams
