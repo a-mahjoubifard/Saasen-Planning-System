@@ -24,6 +24,6 @@ This system addresses that gap by centralizing planning-related data and making 
 ## Architecture
 The system follows a layered architecture separating UI, workflow orchestration, scheduling logic, data persistence, and external integrations (notifications, calendar sync).
 
-- **Data Model:** [View on dbdiagram.io] (https://dbdiagram.io/d/Saasen_datamodel-6a0593b154a51d93d3280549)
+- **Data Model:** [View on dbdiagram.io](https://dbdiagram.io/d/Saasen_datamodel-6a0593b154a51d93d3280549)
 - **Data Flow Diagram:** [View diagram](https://drive.google.com/file/d/1MZ3lFi11sh3u8WCOhzdBExt3xML4X2Hb/view?usp=sharing)
 - **High-Level Architecture Diagrams:** [View diagrams](https://drive.google.com/file/d/1XTn_EyY5GEifvLfKudASrGAVWBBz7VZa/view?usp=sharing)
