@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132007"
+  },
+  "applications": ["*"],
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "availableFrom",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "availableTo",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "InstructorAvailability",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "instructor",
+      "relationshipName": "instructor",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

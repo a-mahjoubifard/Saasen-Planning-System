@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132009"
+  },
+  "applications": ["*"],
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "capacity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "equipmentType",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Location",
+  "relationships": [],
+  "searchEngine": "no"
+}

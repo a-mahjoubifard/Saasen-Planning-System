@@ -1,0 +1,52 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132006"
+  },
+  "applications": ["*"],
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "RequestStatus",
+      "fieldValues": "PENDING,PLANNING,SCHEDULED,COMPLETED,CANCELLED"
+    }
+  ],
+  "name": "Session",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "instructorAvailability",
+      "relationshipName": "instructorAvailability",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "locationAvailability",
+      "relationshipName": "locationAvailability",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "requestedCourse",
+      "relationshipName": "requestedCourse",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "freelancer",
+      "relationshipName": "freelancer",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,52 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132005"
+  },
+  "applications": ["*"],
+  "fields": [
+    {
+      "fieldName": "numberOfParticipants",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "preferredStartDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "preferredLocation",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "RequestStatus",
+      "fieldValues": "PENDING,PLANNING,SCHEDULED,COMPLETED,CANCELLED"
+    },
+    {
+      "fieldName": "actualStartDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "actualEndDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "RequestedCourse",
+  "relationships": [
+    {
+      "otherEntityName": "trainingRequest",
+      "relationshipName": "trainingRequest",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "course",
+      "relationshipName": "course",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

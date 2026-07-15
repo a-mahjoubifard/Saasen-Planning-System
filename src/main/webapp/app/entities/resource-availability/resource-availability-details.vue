@@ -1,0 +1,50 @@
+<template>
+  <div class="d-flex justify-content-center">
+    <div class="col-8">
+      <div v-if="resourceAvailability">
+        <h2 class="jh-entity-heading" data-cy="resourceAvailabilityDetailsHeading">
+          <span>Resource AvailabilityResourceAvailability</span> {{ resourceAvailability.id }}
+        </h2>
+        <dl class="row-md jh-entity-details">
+          <dt>
+            <span>Available From</span>
+          </dt>
+          <dd>
+            <span v-if="resourceAvailability.availableFrom">{{ formatDateLong(resourceAvailability.availableFrom) }}</span>
+          </dd>
+          <dt>
+            <span>Available To</span>
+          </dt>
+          <dd>
+            <span v-if="resourceAvailability.availableTo">{{ formatDateLong(resourceAvailability.availableTo) }}</span>
+          </dd>
+          <dt>
+            <span>Resource</span>
+          </dt>
+          <dd>
+            <div v-if="resourceAvailability.resource">
+              <router-link :to="{ name: 'ResourceView', params: { resourceId: resourceAvailability.resource.id } }">{{
+                resourceAvailability.resource.name
+              }}</router-link>
+            </div>
+          </dd>
+        </dl>
+        <button type="submit" @click.prevent="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <font-awesome-icon icon="arrow-left"></font-awesome-icon>&nbsp;<span>Back</span>
+        </button>
+        <router-link
+          v-if="resourceAvailability.id"
+          :to="{ name: 'ResourceAvailabilityEdit', params: { resourceAvailabilityId: resourceAvailability.id } }"
+          custom
+          v-slot="{ navigate }"
+        >
+          <button @click="navigate" class="btn btn-primary">
+            <font-awesome-icon icon="pencil-alt"></font-awesome-icon>&nbsp;<span>Edit</span>
+          </button>
+        </router-link>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" src="./resource-availability-details.component.ts"></script>

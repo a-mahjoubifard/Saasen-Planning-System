@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132014"
+  },
+  "applications": ["*"],
+  "fields": [
+    {
+      "fieldName": "requestedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "FreelancerRequestStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "REQUESTEDFOR,APPROVED,REJECTED,CANCELLED"
+    }
+  ],
+  "name": "FreelancerAssignmentRequest",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "freelancer",
+      "relationshipName": "freelancer",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "session",
+      "relationshipName": "session",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132012"
+  },
+  "applications": ["*"],
+  "fields": [],
+  "name": "AssignedResource",
+  "relationships": [
+    {
+      "otherEntityName": "resourceAvailability",
+      "relationshipName": "resourceAvailability",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "session",
+      "relationshipName": "session",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

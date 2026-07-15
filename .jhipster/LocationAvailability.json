@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132008"
+  },
+  "applications": ["*"],
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "availableFrom",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "availableTo",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "LocationAvailability",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "location",
+      "relationshipName": "location",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

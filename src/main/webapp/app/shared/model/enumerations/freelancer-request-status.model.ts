@@ -1,0 +1,9 @@
+export enum FreelancerRequestStatus {
+  REQUESTEDFOR = 'REQUESTEDFOR',
+
+  APPROVED = 'APPROVED',
+
+  REJECTED = 'REJECTED',
+
+  CANCELLED = 'CANCELLED',
+}

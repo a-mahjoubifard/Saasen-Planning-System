@@ -1,0 +1,105 @@
+<template>
+  <div>
+    <div class="d-flex justify-content-center">
+      <div class="col-md-8 toastify-container">
+        <h2 v-if="username" id="settings-title">
+          <span
+            >User settings for [<strong>{{ username }}</strong
+            >]</span
+          >
+        </h2>
+
+        <div class="alert alert-success" role="alert" v-if="success"><strong>Settings saved!</strong></div>
+
+        <div class="alert alert-danger" role="alert" v-if="errorEmailExists">
+          <strong>Email is already in use!</strong> Please choose another one.
+        </div>
+
+        <form name="form" id="settings-form" @submit.prevent="save()" v-if="settingsAccount" novalidate>
+          <div class="mb-3">
+            <label class="form-control-label" for="firstName">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              name="firstName"
+              placeholder="Your first name"
+              :class="{ 'is-valid': !v$.settingsAccount.firstName.$invalid, 'is-invalid': v$.settingsAccount.firstName.$invalid }"
+              v-model="v$.settingsAccount.firstName.$model"
+              minlength="1"
+              maxlength="50"
+              required
+              data-cy="firstname"
+            />
+            <div v-if="v$.settingsAccount.firstName.$anyDirty && v$.settingsAccount.firstName.$invalid">
+              <small class="form-text text-danger" v-if="v$.settingsAccount.firstName.required.$invalid"
+                >Your first name is required.</small
+              >
+              <small class="form-text text-danger" v-if="v$.settingsAccount.firstName.minLength.$invalid"
+                >Your first name is required to be at least 1 character</small
+              >
+              <small class="form-text text-danger" v-if="v$.settingsAccount.firstName.maxLength.$invalid"
+                >Your first name cannot be longer than 50 characters</small
+              >
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-control-label" for="lastName">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              name="lastName"
+              placeholder="Your last name"
+              :class="{ 'is-valid': !v$.settingsAccount.lastName.$invalid, 'is-invalid': v$.settingsAccount.lastName.$invalid }"
+              v-model="v$.settingsAccount.lastName.$model"
+              minlength="1"
+              maxlength="50"
+              required
+              data-cy="lastname"
+            />
+            <div v-if="v$.settingsAccount.lastName.$anyDirty && v$.settingsAccount.lastName.$invalid">
+              <small class="form-text text-danger" v-if="v$.settingsAccount.lastName.required.$invalid">Your last name is required.</small>
+              <small class="form-text text-danger" v-if="v$.settingsAccount.lastName.minLength.$invalid"
+                >Your last name is required to be at least 1 character</small
+              >
+              <small class="form-text text-danger" v-if="v$.settingsAccount.lastName.maxLength.$invalid"
+                >Your last name cannot be longer than 50 characters</small
+              >
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-control-label" for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              :class="{ 'is-valid': !v$.settingsAccount.email.$invalid, 'is-invalid': v$.settingsAccount.email.$invalid }"
+              v-model="v$.settingsAccount.email.$model"
+              minlength="5"
+              maxlength="254"
+              email
+              required
+              data-cy="email"
+            />
+            <div v-if="v$.settingsAccount.email.$anyDirty && v$.settingsAccount.email.$invalid">
+              <small class="form-text text-danger" v-if="v$.settingsAccount.email.required.$invalid">Your email is required.</small>
+              <small class="form-text text-danger" v-if="v$.settingsAccount.email.email.$invalid">Your email is invalid.</small>
+              <small class="form-text text-danger" v-if="v$.settingsAccount.email.minLength.$invalid"
+                >Your email is required to be at least 5 characters.</small
+              >
+              <small class="form-text text-danger" v-if="v$.settingsAccount.email.maxLength.$invalid"
+                >Your email cannot be longer than 50 characters.</small
+              >
+            </div>
+          </div>
+          <button type="submit" :disabled="v$.settingsAccount.$invalid" class="btn btn-primary" data-cy="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" src="./settings.component.ts"></script>

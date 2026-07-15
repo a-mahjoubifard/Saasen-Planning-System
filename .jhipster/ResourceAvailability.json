@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20260531132011"
+  },
+  "applications": ["*"],
+  "fields": [
+    {
+      "fieldName": "availableFrom",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "availableTo",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "ResourceAvailability",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "resource",
+      "relationshipName": "resource",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

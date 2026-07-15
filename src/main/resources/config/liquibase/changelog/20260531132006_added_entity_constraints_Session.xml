@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Session.
+    -->
+    <changeSet id="20260531132006-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="instructor_availability_id"
+                                 baseTableName="session"
+                                 constraintName="fk_session__instructor_availability_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instructor_availability"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="location_availability_id"
+                                 baseTableName="session"
+                                 constraintName="fk_session__location_availability_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location_availability"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="requested_course_id"
+                                 baseTableName="session"
+                                 constraintName="fk_session__requested_course_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="requested_course"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="freelancer_id"
+                                 baseTableName="session"
+                                 constraintName="fk_session__freelancer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="freelancer"
+                                 />
+    </changeSet>
+</databaseChangeLog>
