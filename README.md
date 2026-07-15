@@ -27,3 +27,6 @@ The system follows a layered architecture separating UI, workflow orchestration,
 - **Data Model:** [View on dbdiagram.io](https://dbdiagram.io/d/Saasen_datamodel-6a0593b154a51d93d3280549)
 - **Data Flow Diagram:** [View diagram](https://stichtingfontys-my.sharepoint.com/:u:/r/personal/576001_student_fontys_nl/_layouts/15/doc2.aspx?sourcedoc=%7BF161978B-914F-48E4-8A3B-982C8081D54B%7D&file=Drawing.vsdx&action=default&mobileredirect=true&DefaultItemOpen=1&ct=1784018091098&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=86c2de3d-1c6f-43f8-be3c-3ca70e1a0668&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=e39f8e0e-4904-4ef2-8b1d-fcf43b66f2a3)
 - **High-Level Architecture Diagrams:** [View diagrams](https://drive.google.com/file/d/1XTn_EyY5GEifvLfKudASrGAVWBBz7VZa/view?usp=sharing)
+
+## Usage
+Once the application is running, open [http://localhost:8080] in your browser and log in with the default admin credentials:
