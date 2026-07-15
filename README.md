@@ -40,3 +40,11 @@ From the main dashboard, planners can:
 - Check Instructor Availability and Location Availability before scheduling
 - Resolve scheduling conflicts when a resource is already assigned to another session
 - Use the Freelancer workflow to assign external instructors when no internal instructor is available
+
+## Project Status
+This prototype was developed to validate an approach identified through research: that an information-centric, entity-based system could effectively solve Saasen's planning visibility problem. Rather than serving as a production-ready solution, its purpose was to confirm that this direction was the right one to pursue. The validation results confirmed that this approach is a suitable path forward for addressing the scheduling challenges at Saasen.
+
+## Author
+Arash Mahjoubifrd
+
+Email: [a.mahjubifard@gamil.com](a.mahjubifard@gamil.com)
