@@ -29,4 +29,14 @@ The system follows a layered architecture separating UI, workflow orchestration,
 - **High-Level Architecture Diagrams:** [View diagrams](https://drive.google.com/file/d/1XTn_EyY5GEifvLfKudASrGAVWBBz7VZa/view?usp=sharing)
 
 ## Usage
-Once the application is running, open [http://localhost:8080] in your browser and log in with the default admin credentials:
+Once the application is running, open [http://localhost:8080](http://localhost:8080) in your browser and log in with the default admin credentials:
+- **Username:** `admin`
+- **Password:** `admin`
+
+From the main dashboard, planners can:
+
+- Review incoming Training Requests and break them down into individual Requested Courses
+- Create and manage Sessions for each requested course, assigning an available instructor and location
+- Check Instructor Availability and Location Availability before scheduling
+- Resolve scheduling conflicts when a resource is already assigned to another session
+- Use the Freelancer workflow to assign external instructors when no internal instructor is available
